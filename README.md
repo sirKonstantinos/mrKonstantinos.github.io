@@ -1,4 +1,4 @@
-<h1 color:red>This is the title of my page.</h1>
+<h1 style=color:red>This is the title of my page.</h1>
 
 this is the subtitle of my page.
 why is this not shown?
