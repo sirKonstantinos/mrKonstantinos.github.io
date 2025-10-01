@@ -5,16 +5,16 @@
 layout: default
 title: Home
 ---
+<div align="center">
 
-# Welcome to My Site 👋
+<h1>Welcome to My Site 👋</h1>
 
-This is my personal Jekyll site, built with [GitHub Pages](https://pages.github.com/).
+This is my personal Jekyll site, built with <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 
-## Explore
-
-- 📄 [About Me](/about/)
-- ✉️ [Contact](/contact/)
-
----
-
+<h2> Explore </h2>
+<ul>
+<li>📄 <a href="/about">About Me</a></li>
+<li>✉️ <a href="/contact">Contact</a></li>
+</ul>
 Thanks for visiting!
+</div>
