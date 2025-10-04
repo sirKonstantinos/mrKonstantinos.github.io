@@ -3,8 +3,6 @@ layout: default
 title: Home
 ---
 
-<link rel="stylesheet" href="/assets/css/style.css">
-
 <!-- Top navigation bar -->
 <div class="top-nav">
   <div class="menu-left">
@@ -58,5 +56,3 @@ title: Home
   <p>This project is under moderation.<br>
   Thanks for visting!</p>
 </footer>
-
-<script src="{{ '/assets/js/main.js' | relative_url }}"></script>
