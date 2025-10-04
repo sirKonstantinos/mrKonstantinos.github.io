@@ -1,6 +1,19 @@
 ---
 ---
 
+/* Reset unwanted default margins/padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: sans-serif;
+}
+
+
 /* ==========================
    Top navigation bar
 ========================== */
@@ -14,6 +27,7 @@
   position: sticky;
   top: 0;
   z-index: 1000;
+  margin: 0;
 }
 
 .menu-left {
@@ -51,6 +65,8 @@
   width: 100%;
   height: 70vh;
   overflow: hidden;
+  margin: 0;
+  margin-bottom: 60px;
 }
 
 .video-section video {
@@ -78,30 +94,33 @@
 }
 
 /* ==========================
-   Two-column section
+   Two-column full-width section
 ========================== */
 .two-columns {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 40px 20px;
-  background-color: #f5f5f5;
+  width: 100%;
+  height: 100vh; /* Full screen height */
+  overflow: hidden;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  gap: 20px; /* Space between columns */
+  padding: 0 20px; /* Space between page edges and columns */
+  box-sizing: border-box; /* Include padding in width */
 }
 
 .column {
   position: relative;
-  flex: 1 1 300px;
-  max-width: 400px;
+  flex: 1;
   overflow: hidden;
-  border-radius: 8px;
-  text-align: center;
+  cursor: pointer;
+  transition: transform 0.5s ease;
 }
 
 .column img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
 }
 
 .column-overlay {
@@ -109,22 +128,60 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
   color: white;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.8);
 }
 
 .column-overlay h2 {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  font-size: 2rem;
 }
 
 .column-overlay button {
-  padding: 10px 20px;
+  padding: 12px 24px;
   border: none;
-  background-color: #ff6600;
+  background-color: rgba(255, 102, 0, 0.9);
   color: white;
   font-size: 16px;
   cursor: pointer;
   border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
+
+.column-overlay button:hover {
+  background-color: rgba(255, 102, 0, 1);
+}
+
+/* Hover zoom effect */
+.column:hover img,
+.column:hover .column-overlay h2,
+.column:hover .column-overlay button {
+  transform: scale(1.05);
+}
+
+/* Smooth scaling for text/button (so they zoom gently) */
+.column-overlay h2,
+.column-overlay button {
+  transition: transform 0.4s ease;
+}
+
+/* Responsive stacking for small screens */
+@media (max-width: 768px) {
+  .two-columns {
+    flex-direction: column;
+    height: auto;
+    gap: 20px; /* Keep some spacing when stacked */
+    padding: 0 20px; /* Keep edge padding */
+  }
+
+  .column {
+    height: 50vh;
+  }
+}
+
+
+
 
 /* ==========================
    Footer
@@ -133,7 +190,8 @@ footer {
   background-color: black;
   color: white;
   text-align: center;
-  padding: 40px 20px;
+  padding: 60px 20px;
+  margin: 0;
 }
 
 /* ==========================
@@ -145,3 +203,78 @@ footer {
     align-items: center;
   }
 }
+
+/* ==========================
+   Sidebar menu
+========================== */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px; /* hidden by default */
+  width: 300px;
+  height: 100%;
+  background-color: white;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+  transition: left 0.3s ease;
+  z-index: 2000;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar.open {
+  left: 0; /* slide in */
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+#close-sidebar {
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu li {
+  margin-bottom: 20px;
+}
+
+.sidebar-menu li a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.sidebar-menu li a:hover {
+  color: orange;
+}
+
+/* Optional overlay to darken the page when sidebar is open */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.0);
+  transition: background 0.3s ease;
+  pointer-events: none;
+  z-index: 1500;
+}
+
+.sidebar.open ~ body::after {
+  background: rgba(0,0,0,0.3);
+  pointer-events: auto;
+}
+
