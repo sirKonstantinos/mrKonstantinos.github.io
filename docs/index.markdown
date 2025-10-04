@@ -3,23 +3,6 @@ layout: default
 title: Home
 ---
 
-<!-- Top navigation bar -->
-<div class="top-nav">
-  <div class="menu-left">
-    <span>Menu</span>
-    <div class="burger">
-    <div class="burger-line"></div>
-    <div class="burger-line"></div>
-    <div class="burger-line"></div>
-    </div>
-  </div>
-  <div class="menu-center">Home</div>
-  <div class="menu-right">
-    <span>👤</span>
-    <span>🛒</span>
-  </div>
-</div>
-
 <!-- Video section -->
 <div class="video-section">
   <video autoplay muted loop>
