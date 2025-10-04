@@ -5,21 +5,6 @@ title: Home
 
 <link rel="stylesheet" href="/assets/css/style.css">
 
-<!-- Sidebar menu -->
-<div class="sidebar" id="sidebar">
-  <div class="sidebar-header">
-    <h2>Menu</h2>
-    <span id="close-sidebar">&times;</span>
-  </div>
-  <ul class="sidebar-menu">
-    <li><a href="#">Donation</a></li>
-    <li><a href="#">Support</a></li>
-    <li><a href="#">Sign in</a></li>
-    <li><a href="#">My Orders</a></li>
-    <li><a href="#">Contact Us</a></li>
-  </ul>
-</div>
-
 <!-- Top navigation bar -->
 <div class="top-nav">
   <div class="menu-left">
