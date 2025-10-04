@@ -1,13 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-  </head>
-  <body>
-    <main class="content">
-      {{ content }}
-    </main>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+
+  <!-- Sidebar menu -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <span id="close-sidebar">&times;</span>
+      <h2>Menu</h2>
+    </div>
+    <ul class="sidebar-menu">
+      <li><a href="#">Donation</a></li>
+      <li><a href="#">Support</a></li>
+      <li><a href="#">Sign in</a></li>
+      <li><a href="#">My Orders</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </div>
+
+  <!-- Main content -->
+  {{ content }}
+
+  <!-- JS -->
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
 </html>
