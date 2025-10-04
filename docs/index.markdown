@@ -18,14 +18,14 @@ title: Home
 <!-- Two-column section -->
 <div class="two-columns">
   <div class="column">
-    <img src="/assets/jpg/accessories.jpg" alt="Image 1">
+    <img src="{{ '/assets/jpg/accessories.jpg' | relative_url }}" alt="Image 1">
     <div class="column-overlay">
       <h2>Accessories</h2>
       <button>Go to shop</button>
     </div>
   </div>
   <div class="column">
-    <img src="/assets/jpg/equipment.jpg" alt="Image 2">
+    <img src="{{ '/assets/jpg/equipment.jpg' | relative_url }}" alt="Image 2">
     <div class="column-overlay">
       <h2>Equipment</h2>
       <button>Go to shop</button>
