@@ -25,7 +25,7 @@ description: >-
 # Site URLs
 domain: "sirKonstantinos.github.io"
 url: "https://sirKonstantinos.github.io"
-baseurl: ""  # The repository name, no trailing slash
+baseurl: "/mrKonstantinos"  # The repository name, no trailing slash
 
 # Theme
 theme: jekyll-theme-minimal
