@@ -23,8 +23,9 @@ description: >-
   Write an awesome description for your new site here.
 
 # Site URLs
+domain: "sirKonstantinos.github.io"
 url: "https://sirKonstantinos.github.io"
-baseurl: "/mrKonstantinos"  # The repository name, no trailing slash
+baseurl: ""  # The repository name, no trailing slash
 
 # Theme
 theme: jekyll-theme-minimal

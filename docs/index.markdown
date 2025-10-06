@@ -6,7 +6,7 @@ title: Home
 <!-- Video section -->
 <div class="video-section">
   <video autoplay muted loop>
-    <source src="{{ '/assets/mp4/cpright-free-nature.mp4?v=2' | relative_url }}" type="video/mp4">
+    <source src="{{ '/assets/mp4/cpright-free-nature.mp4' | relative_url }}" type="video/mp4">
     Your browser does not support the video tag.
   </video>
   <div class="video-overlay">
